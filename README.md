@@ -35,6 +35,23 @@ Normally, we would favor modeling the process with $p = 1$. However, it is worth
 
 ### Optimal Model
 
+<figcaption align = "center"><b>Table 1: Coefficient Estimates and Model Comparison for ARIMA Models.</b></figcaption> <br/>
+
+<table style="text-align:center"><caption><strong>Coefficient Estimates and Model Comparison for ARIMA Models.</strong></caption>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td>AR(p=3)</td><td>AR(p=1)</td></tr>
+<tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">ar1</td><td>0.348<sup>***</sup> (0.074)</td><td>0.379<sup>***</sup> (0.070)</td></tr>
+<tr><td style="text-align:left">ar2</td><td>0.179<sup>**</sup> (0.078)</td><td></td></tr>
+<tr><td style="text-align:left">ar3</td><td>-0.142<sup>*</sup> (0.075)</td><td></td></tr>
+<tr><td style="text-align:left">intercept</td><td>0.008<sup>***</sup> (0.001)</td><td>0.008<sup>***</sup> (0.001)</td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>176</td><td>176</td></tr>
+<tr><td style="text-align:left">Log Likelihood</td><td>565.842</td><td>562.471</td></tr>
+<tr><td style="text-align:left">sigma<sup>2</sup></td><td>0.0001</td><td>0.0001</td></tr>
+<tr><td style="text-align:left">Akaike Inf. Crit.</td><td>-1,121.685</td><td>-1,118.943</td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
+
+
 Table 1 presents the results of estimating two ARIMA models, specifically AR(3) and AR(1). The coefficient estimates for autoregressive terms reveal the impact of lagged values on the current observation. In Model 1, the ar1 coefficient is 0.348, indicating that a one-unit increase in the first lag corresponds to an estimated 0.348-unit increase in the present observation. Similarly, in Model 2, the ar1 coefficient is 0.379. Positive coefficients for ar2 in Model 1 suggest positive effects for the second lag, unlike the third lag, where the trend is reversed. The intercept term, consistently maintained at 0.008 across both models, represents the constant term. Standard errors, provided in parentheses beneath each coefficient, convey the precision of the estimates. P-values, located at the table's bottom, signify the statistical significance of each coefficient. Notably, at a 1\% significance level, only the first lag is significant in both models, emphasizing its importance in explaining the observed variations.
 
 <figcaption align = "center"><b>Figure 4: Autocorrelation function (ACF) plot of the optimal models’ residuals.</b></figcaption> <br/>
@@ -148,12 +165,13 @@ Figure 9 illustrates trace plots and density plots, illustrating parameters and 
 
 ![Figure 9: Visualizing the Results of Bayesian AR(3) model.](out/fig_09.png)
 
+![Figure 9: Visualizing the Results of Bayesian AR(3) model.](out/fig_10.png)
 
 ### Forecast
 
 <figcaption align = "center"><b>Figure 10: Bayesian forecast of the U.S. real GNP growth rate.</b></figcaption> <br/>
 
-![Figure 10: Bayesian forecast of the U.S. real GNP growth rate.](out/fig_10.png)
+![Figure 10: Bayesian forecast of the U.S. real GNP growth rate.](out/fig_11.png)
 
 Figure 10 provides an insightful visualization of forecasted values. The depiction includes a black line with data points marked by dots, likely representing observed or actual growth rates over time. Additionally, a red line, appearing smoother, likely signifies Bayesian forecasted growth rates. The black line exhibits fluctuations in the growth rate over the years, displaying peaks and troughs. In contrast, the red line, while following the general trend of the black line, smoothens out volatility. This smoothing characteristic aligns with the typical behavior of a forecast line, aiming to predict the underlying trend rather than replicating noise present in the actual data. Notably, the forecasted values reveal a positive trend in the growth rate of U.S. real Gross National Product (GNP) for the upcoming two quarters, suggesting an optimistic outlook and the potential for economic expansion. Acknowledging the inherent uncertainty linked with forecasts, this visual observation serves as an initial indicator of a positive trajectory in short-term economic growth.
 
