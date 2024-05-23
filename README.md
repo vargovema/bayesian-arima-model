@@ -80,7 +80,59 @@ Specifically for the AR(3) model, the histograms represent distributions for par
 
 ### Model Diagnostics
 
+```
+Iterations = 1:1000
+Thinning interval = 1 
+Number of chains = 3 
+Sample size per chain = 1000 
+
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
+
+               Mean        SD  Naive SE Time-series SE
+b         3.776e-01 7.460e-02 1.362e-03      1.420e-03
+deviance -1.121e+03 3.431e+00 6.264e-02      6.277e-02
+q         1.122e-04 1.235e-05 2.254e-07      2.254e-07
+u         4.811e-03 1.002e-03 1.830e-05      1.943e-05
+
+2. Quantiles for each variable:
+
+               2.5%        25%        50%        75%      97.5%
+b         2.236e-01  3.295e-01  3.785e-01  4.275e-01  5.210e-01
+deviance -1.125e+03 -1.123e+03 -1.121e+03 -1.119e+03 -1.112e+03
+q         9.113e-05  1.037e-04  1.110e-04  1.198e-04  1.397e-04
+u         2.848e-03  4.121e-03  4.835e-03  5.471e-03  6.841e-03
+```
+
 The output above presents the findings of a Bayesian estimation conducted over 1000 iterations, with a thinning interval of 1, employing three chains, each generating a sample size of 1000. The empirical mean and standard deviation, along with the standard error of the mean and time-series standard error, are provided for key variables ('b', 'deviance', 'q', and 'u'). For instance, the parameter 'b' exhibits an empirical mean of 0.376 and a standard deviation of 0.075, indicating its average value and variability. The 'deviance', representing model fit, has a mean of -1121 and a standard deviation of 3.151, with quantiles offering insights into the distribution. Similarly, 'q' and 'u' parameters are characterized by their means and quantiles, shedding light on their central tendency and variability. 
+
+```
+Iterations = 1:1000
+Thinning interval = 1 
+Number of chains = 3 
+Sample size per chain = 1000 
+
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
+
+               Mean        SD  Naive SE Time-series SE
+b1        3.468e-01 7.980e-02 1.457e-03      1.440e-03
+b2        1.811e-01 8.056e-02 1.471e-03      1.505e-03
+b3       -1.408e-01 8.061e-02 1.472e-03      1.510e-03
+deviance -1.125e+03 4.070e+00 7.431e-02      7.429e-02
+q         1.092e-04 1.189e-05 2.170e-07      2.172e-07
+u         4.707e-03 1.102e-03 2.012e-05      2.145e-05
+
+2. Quantiles for each variable:
+
+               2.5%        25%        50%        75%      97.5%
+b1        1.862e-01  2.928e-01  3.478e-01  4.019e-01  4.993e-01
+b2        2.341e-02  1.298e-01  1.799e-01  2.322e-01  3.482e-01
+b3       -3.010e-01 -1.940e-01 -1.406e-01 -8.760e-02  1.950e-02
+deviance -1.131e+03 -1.128e+03 -1.126e+03 -1.123e+03 -1.115e+03
+q         8.839e-05  1.012e-04  1.082e-04  1.167e-04  1.348e-04
+u         2.573e-03  3.966e-03  4.691e-03  5.441e-03  6.864e-03
+```
 
 The output provided above details the outcomes of a Bayesian estimation process conducted over 1000 iterations with a thinning interval of 1, utilizing three chains, each producing a sample size of 1000. The first section presents the empirical mean, standard deviation, naive standard error, and time-series standard error for key variables ('b1', 'b2', 'b3', 'deviance', 'q', and 'u'). Notably, 'b1' has an empirical mean of 0.3441 with a standard deviation of 0.0785, indicating its average value and variability. The second section provides quantiles (2.5%, 25%, 50%, 75%, 97.5%) for each variable, offering insights into the distribution of parameter estimates. For instance, the 50th percentile (median) values for 'b1', 'b2', 'b3', 'deviance', 'q', and 'u' provide central tendencies, while the range between the 2.5th and 97.5th percentiles illustrates the spread of the estimates.
 
