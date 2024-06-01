@@ -1,5 +1,7 @@
 # Quarterly growth rate of U.S. real GNP
 
+This project aims to analyze the quarterly growth rate of U.S. real Gross National Product (GNP) using both classical ARIMA and Bayesian approaches to time series modeling, providing insights into historical patterns and future forecasts.
+
 ## Data Overview
 
 Figure 1 indicates that the time series is second-order stationary with a constant mean and volatility. Moving forward, we proceed to check for autocorrelation patterns, aiming to understand the relationships between observations at different time lags and uncover any underlying temporal dynamics within the data.
